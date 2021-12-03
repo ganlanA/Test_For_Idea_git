@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace绑定接口-->
+<mapper namespace="com.kuang.springcloud.dao.DeptDao">
+    
+    <insert id="addDept" parameterType="Dept">
+        insert into dept(dname, db_source)
+        values (#{dname}, DATABASE());
+    </insert>
+    
+    <select id="queryById" resultType="Dept" parameterType="Long">
+        select * from dept where deptno = #{dept};
+    </select>
+
+    <select id="queryAll" resultType="Dept">
+        select * from dept;
+    </select>
+
+
+</mapper>
