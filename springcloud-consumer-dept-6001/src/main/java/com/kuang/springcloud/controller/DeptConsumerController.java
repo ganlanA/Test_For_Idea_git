@@ -16,13 +16,12 @@ public class DeptConsumerController {
 
     //消费者,不应该有service层
     //RestTemplate 供我们调用就可以了 注册到Spring中
-
-
     @Autowired
     private RestTemplate restTemplate; //  提供多种便捷访问远程http服务的方法, 简单的restful服务模板
 
-
-    private static final String REST_URL_PREFIX = "http://localhost:8001";
+    //ribbon 这里应该是变量
+    //private static final String REST_URL_PREFIX = "http://localhost:8001";
+    private static final String REST_URL_PREFIX = "http://SPRINGCLOUD-PROVIDER-DEPT";
 
     @RequestMapping("/consumer/dept/add")
     public boolean add(Dept dept){
