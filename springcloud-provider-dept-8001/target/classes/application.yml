@@ -24,3 +24,4 @@ eureka:
   instance:
     instance-id: springcloud-provider-dept8001
 
+# P8
