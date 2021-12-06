@@ -1,2 +1,6 @@
 # Test_For_Idea_git
-test for remote repository
+Used to test for remote repository
+
+
+# springcloud
+Now is a tiny project for learning springcloud 
