@@ -1,0 +1,28 @@
+server:
+  port: 9527
+spring:
+  application:
+    name: springcloud-zuul
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/,http://localhost:7002/eureka/,http://localhost:7003/eureka/
+  instance:
+    instance-id: zuul9527.com
+    prefer-ip-address: true
+
+info:
+  app.name: kuang-springcloud
+  company.name: blog.kuangstudy.com
+
+
+#隐藏url显示的微服务名字
+zuul:
+  routes:
+    #springcloud-provider-dept转成/mydept/**
+    mydept.serviceId: springcloud-provider-dept
+    mydept.path: /mydept/**
+  #忽略springcloud-provider-dept只允许/mydept/**访问
+  ignored-services: springcloud-provider-dept
+
