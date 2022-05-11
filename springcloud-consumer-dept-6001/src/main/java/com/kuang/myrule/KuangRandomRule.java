@@ -21,7 +21,7 @@ public class KuangRandomRule extends AbstractLoadBalancerRule {
     private int total = 0;
     private int currentIndex = 0;
 
-
+//123
     //@edu.umd.cs.findbugs.annotations.SuppressWarnings(value = "RCN_REDUNDANT_NULLCHECK_OF_NULL_VALUE")
     public Server choose(ILoadBalancer lb, Object key) {
         if (lb == null) {
